@@ -1,0 +1,9 @@
+
+*~
+*.class
+*.egg-info\
+*.log
+*.pyc
+*.swo
+*.swp
+.idea\

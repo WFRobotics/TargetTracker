@@ -1,40 +1,29 @@
 # TargetTracker
-Python script to run GRIP generated code on a Kangaroo that detects and reports tracked targets.
+STEM Alliance vision coprocessor
 
-# Prerequisites
-- Kangaroo PC
-- Python 3.6+
-- OpenCV 3.x/GRIP
+Python script to run GRIP generated code on a Kangaroo. Detected vision targets are reported to the robot. 
 
-# Main Features
-- 1 or 2 cameras
-- Custom configurations of cameras, processing settings, ports, etc
-- MJPG streamer (for webpage/Smartdashboard)
-- Socket connection for reporting target data to RoboRIO
-
-# Issues
-- OpenCV/GRIP processing multiple camera streams at once cannot keep up with 30fps, and will continuously increase the frame delay and decrease FPS until it is unusable. It is recommended to only have one camera stream being processed at a time.
-
-# Install & Run
+# Setup
+Install the latest [python 3](https://www.python.org/downloads/). Put it **and the python scripts directory** in your PATH:
 ```bat
-pip install -e .
+C:\Python37;C:\Python37\Scripts\
 ```
-
-```bat
-track
-```
-
-# Develop & Test
+**afterwards** open a command line and **install Target Tracker + dependencies** with python's package manager:
 ```bat
 pip install -e .[dev]
 ```
 
+# Run
+**At competition**, the Kangeroo will run Target Tracker from a startup script, which calls:
 ```bat
-flake8
+track
 ```
+you can also run on your **own PC for testing**:
+```bat
+track_local
+```
+which **sends data locally to the java test app** stored in the Reuse repo
 
-# Help
-For help, run
-```bat
-    py vision.py --help
-```
+# Hardware
+- Kangaroo PC
+- USB Camera

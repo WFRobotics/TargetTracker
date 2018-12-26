@@ -1,0 +1,12 @@
+{
+    "src": 0,
+    "width" : 640,
+    "height" : 480,
+    "rotate" : 0,
+    "exposure" : -5,
+    "brightness" : 128,
+    "saturation" : 128,
+    "host": "localhost",
+    "port": 5801,
+    "video": 1
+}

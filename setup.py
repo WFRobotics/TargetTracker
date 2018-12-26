@@ -12,7 +12,7 @@ setup(
     version='0.1',
     description='Vision Coprocessor',
     long_description='Kangaroo coprocessor vision target tracking',
-    author='Team 4818 WFRobotics',
+    author='STEM Alliance of Fargo Moorhead',
     author_email='wfrobotics@gmail.com',
     packages=find_packages(),
     python_requires='>=3.6',
@@ -23,8 +23,8 @@ setup(
             ]
     },
     install_requires=[
-        'opencv-python>=3.3.0.10',
-        'jsonschema>=2.6.0'
+        'argparse',
+        'opencv-python',
     ],
     extras_require={
         'dev': [
